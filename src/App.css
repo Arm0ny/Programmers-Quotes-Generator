@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #1e2328;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#main{
+    height: 90vh;
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#main h1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3rem;
+    color: #C5CDF8FF;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+#quotes_article{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#quotes_div{
+    width: 60%;
+    height: 60%;
+    display: grid;
+    margin: auto;
+    grid-template-rows: .3fr 2fr 1fr ;
+    align-items: center;
+    background-color: #2e3644;
+    color: #c5cdf8;
+    font-family: 'Roboto Mono', monospace ;
+    font-size: 1.2rem;
+    border-radius: 20px;
 }
+
+#quote{
+    padding: 0 5% 0 2%
+}
+
+#author{
+    color: #ff0000;
+    text-align: end;
+    padding-right: 5%;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #404c59;
+
+}
+
+li{
+    margin-right: 1.5rem;
+    font-size: 2rem;
+}
+
+#li1{
+    color: red;
+    margin-left: 4%;
+}
+
+#li2{
+    color: yellow;
+}
+
+#li3{
+    color: green;
+}
+
+#get_button{
+    display: block;
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+    padding: 1rem;
+}
+
+#get_button:hover{
+    color: #1b1d21;
+    background-color: red;
+}
+
+
