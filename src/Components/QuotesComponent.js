@@ -1,10 +1,12 @@
 import React from "react";
+import LineIcon from "react-lineicons";
 export class QuotesComponent extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             quote: 'Water is Wet...',
-            author: 'totallyNotAPoet'
+            author: 'totallyNotAPoet',
+            twitLink : ''
         }
         this.getQuotes = this.getQuotes.bind(this);
     }
@@ -15,7 +17,9 @@ export class QuotesComponent extends React.Component{
             .then(json => {
                 this.setState({
                     quote: json.en,
-                    author: json.author
+                    author: json.author,
+                    twitLink: 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
+                        encodeURIComponent('"' + json.en + '" ' + json.author)
                 })
             });
     }
@@ -30,7 +34,10 @@ export class QuotesComponent extends React.Component{
                         <li id='li3'></li>
                     </ul>
                     <p id='quote'>Computer-:Programming_quotes$    {this.state.quote}</p>
-                    <p id='author'>{this.state.author}</p>
+                    <div id='quote_bottom'>
+                        <p id='author'>{this.state.author}</p>
+                        <a href={this.state.twitLink} id='tweet-quote' target='_top'>Tweet me! <LineIcon name="twitter-original"/></a>
+                    </div>
                 </div>
                 <button id='get_button' onClick={this.getQuotes}>Get Quote</button>
             </article>

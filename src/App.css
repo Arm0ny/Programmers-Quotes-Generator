@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace ;
 }
 
 body{
@@ -26,7 +27,6 @@ body{
 }
 
 #main h1{
-    font-family: 'Roboto Mono', monospace;
     font-size: 3rem;
     color: #C5CDF8FF;
 
@@ -48,17 +48,39 @@ body{
     height: 60%;
     display: grid;
     margin: auto;
-    grid-template-rows: .3fr 2fr 1fr ;
+    grid-template-rows: .3fr 2fr 1fr 1fr ;
     align-items: center;
     background-color: #2e3644;
     color: #c5cdf8;
-    font-family: 'Roboto Mono', monospace ;
     font-size: 1.2rem;
     border-radius: 20px;
 }
 
 #quote{
     padding: 0 5% 0 2%
+}
+
+#quote_bottom{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%
+}
+
+#quote_bottom a{
+    display: block;
+    line-height: 3rem;
+    width: 8rem;
+    background-color: transparent;
+    border: 2px solid  #169BFA;
+    color: #169BFA;
+    font-size: 1rem;
+    text-align: center;
+
 }
 
 #author{
@@ -109,5 +131,7 @@ li{
     color: #1b1d21;
     background-color: red;
 }
+
+
 
 
