@@ -20,7 +20,7 @@ export class QuotesComponent extends React.Component{
                     author: json.author,
                     twitLink: 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' +
                         encodeURIComponent('"' + json.en + '" ' + json.author)
-                })
+                });
             });
     }
 
